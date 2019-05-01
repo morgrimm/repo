@@ -1,0 +1,3 @@
+[submodule "pkgs/com.morgrimm.morglyphs"]
+	path = pkgs/com.morgrimm.morglyphs
+	url = https://morgrimm@github.com/morgrimm/morglyphs.git
