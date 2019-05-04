@@ -35,8 +35,8 @@ jobs:
       REPO: repo
     steps:
       - *git_install
-      - *git_configure_user
       - *git_checkout
+      - *git_configure_user
       - run:
           name: Install Make
           command: apt-get install -y build-essential
@@ -64,8 +64,8 @@ jobs:
       REPO: morgrimm.github.io
     steps:
       - *git_install
-      - *git_configure_user
       - *git_checkout
+      - *git_configure_user
       - run: git submodules update --remote --merge
       - run:
           name: Update repo submodule
