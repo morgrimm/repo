@@ -1,6 +1,6 @@
-version: 2
+version: 2.1
 jobs:
-  update_repository:
+  update_packages:
     docker:
       - image: debian:stretch-slim
     working_directory: ~/repo
@@ -45,7 +45,7 @@ jobs:
             git add -A
             git commit -m "RELEASE by CircleCI [skip ci]"
             git push -q https://${GITHUB_PERSONAL_TOKEN}@github.com/morgrimm/repo.git ${CIRCLE_BRANCH}
-  update_host:
+  update_repository:
     docker:
       - image: debian:stretch-slim
     working_directory: ~/morgrimm.github.io
@@ -76,3 +76,11 @@ jobs:
             git add -A
             git commit -m "Update repo submodule by CircleCI [skip ci]"
             git push -q https://${GITHUB_PERSONAL_TOKEN}@github.com/morgrimm/morgrimm.github.io.git ${CIRCLE_BRANCH}
+workflows:
+  version: 2
+  package-and-release:
+    jobs:
+      - update_packages
+      - update_repository:
+          requires:
+            - update_packages
