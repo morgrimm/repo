@@ -44,4 +44,4 @@ jobs:
           command: |
             git add -A
             git commit -m "RELEASE by CircleCI"
-            git push -q
+            git push -q https://${GITHUB_PERSONAL_TOKEN}@github.com/morgrimm/repo.git ${CIRCLE_BRANCH}
