@@ -1,0 +1,7 @@
+#! /bin/sh
+
+for p in $(find ./pkgs ! -path ./pkgs ! -path './pkgs/**/**' -type d); do
+  # Build a deb
+  dpkg -b $p ./debs/nani.deb
+done
+
