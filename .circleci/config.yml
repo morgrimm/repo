@@ -1,7 +1,8 @@
 version: 2
 jobs:
   build:
-    docker: debian:stretch-slim
+    docker:
+      - debian:stretch-slim
     working_directory: ~/repo
     branches:
       only:
