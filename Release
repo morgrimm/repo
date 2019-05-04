@@ -1,0 +1,18 @@
+Origin: Morgrimm's Repo
+Label: Morgrimm's Repository
+Suite: stable
+Version: 1.0
+Codename: morgy
+Architectures: iphoneos-arm
+Components: main
+Description: Morgrimm's cool Sileo repo, with themes
+Icon: file://assets/RepoIcon.png
+MD5Sum:
+ 18f88a8a18a9f7ac5f0fbd8e901402c2 379 Packages
+ 75d4965dba0b0e54c63e8d0346ed0f6d 313 Packages.bz2
+SHA1:
+ 669a3aa0ddf8b919a388bf2323f3cca4dac49db4 379 Packages
+ c153a0c685335714a2f175c1eeafff5c4b9f8178 313 Packages.bz2
+SHA256:
+ 5f3ca7cc67a177eab903963237ebdf9d95ed269e6e51693a506c982ee7b7d8e9 379 Packages
+ 690a0b1ec0b6082fb0cc56acf5959840f94eb490d93363cfaf9efa9e95fed7c6 313 Packages.bz2
