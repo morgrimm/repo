@@ -8,11 +8,11 @@ Components: main
 Description: Morgrimm's cool Sileo repo, with themes
 Icon: file://assets/RepoIcon.png
 MD5Sum:
- e7d4296c4aefe56aff4313fc3aa79910 379 Packages
- f5abffa09c6556ea90f39c8e4ae28870 317 Packages.bz2
+ 220e3300779bb5c2e6af75855261c638 379 Packages
+ 5d2ecb800770e9f2edf39e8de6643961 318 Packages.bz2
 SHA1:
- ad484de58040405f8383a2a7a8cd9405d38ecb27 379 Packages
- 166250506ebde3ce9063ef78b9db25482ca1d908 317 Packages.bz2
+ 2e8a78d841c77418e2e7e59baa7340e3a3ed0fe4 379 Packages
+ 2873438ea07c94ff1ce19c66ed1f804e200101a0 318 Packages.bz2
 SHA256:
- e463ef05afe9761a244527993d635a35e842256332f3dd9df5e543e2079567e5 379 Packages
- 42cab014e064a19edc0e9d656ce9eae8dc265d598297bc54e9bec85951d36ce4 317 Packages.bz2
+ c88f8bd6cc4e2b03888cf6b3b15e79ececa5e377e1e784fcb01a4541a69af9a0 379 Packages
+ c2d2b0be62767b957228da22fcf6c62dc9d317628f9bbd05b4ad03116d84acfa 318 Packages.bz2
