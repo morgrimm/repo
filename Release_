@@ -1,0 +1,9 @@
+Origin: Morgrimm's Repo
+Label: Morgrimm's Repository
+Suite: stable
+Version: 1.0
+Codename: morgy
+Architectures: iphoneos-arm
+Components: main
+Description: Morgrimm's cool Sileo repo, with themes
+Icon: file://assets/RepoIcon.png
