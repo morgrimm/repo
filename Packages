@@ -3,10 +3,10 @@ Version: 0.1
 Architecture: iphoneos-arm
 Maintainer: Morgrimm
 Filename: ./debs/nani.deb
-Size: 12494
-MD5sum: 5f2887cb9423c532b2639b0b165b48b9
-SHA1: 4c4b5dbbf481c77dcf95c9c468ed11685456c204
-SHA256: 3c460aec1e82db6ccedce7936ef8e04e71bd3e70f05434a8a1b6d85f7ed634da
+Size: 12488
+MD5sum: f5130836809eea9ab395be5a0deb169f
+SHA1: f88a5e9cf7c9399234e9c3953ad72b9cf78d1b0a
+SHA256: 682628fbecbc0538d04cc519b37b6059c213a12d944f8a8810f6e0cd79c42542
 Section: Themes
 Description: Additional glyph icons!
 Author: Morgrimm
