@@ -78,7 +78,13 @@ workflows:
   version: 2
   package-and-release:
     jobs:
-      - update_packages
+      - update_packages:
+          filters:
+            branches:
+              only: master
       - update_repository:
           requires:
             - update_packages
+          filters:
+            branches:
+              only: master
