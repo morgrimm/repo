@@ -16,7 +16,7 @@ $controlFormat = qr/
 
 $pkgPath = $ARGV[0];
 
-open(my $fh, '<:encoding(UTF-8)', "$pkgPath/DEBIAN/control")
+open(my $fh, '<:encoding(UTF-8)', "$pkgPath/package/DEBIAN/control")
   or die "Could not open file 'dur' $!";
 
 my $control = do { local $/; <$fh> };

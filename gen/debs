@@ -4,6 +4,6 @@ mkdir -p debs
 
 for p in $(find ./pkgs ! -path ./pkgs ! -path './pkgs/**/**' -type d); do
   $DEB=$(./dpkg-gen-deb-name $p)
-  dpkg -b $p ./debs/$DEB
+  dpkg -b $p/package ./debs/$DEB
 done
 
