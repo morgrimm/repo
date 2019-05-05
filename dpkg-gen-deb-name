@@ -1,0 +1,26 @@
+#! /usr/bin/perl
+
+$controlFormat = qr/
+  ^
+  Package:\s(?<Package>.*)\n
+  Name:\s(?<Name>.*)\n
+  Version:\s(?<Version>[\d|.]*)\n
+  Architecture:\s(?<Architecture>.*)\n
+  Description:\s(?<Description>.*)\n
+  Author:\s(?<Author>.*)\n
+  Maintainer:\s(?<Maintainer>.*)\n
+  Section:\s(?<Section>.*)\n
+  Homepage:\s(?<Homepage>.*)
+  $
+  /x;
+
+$pkgPath = $ARGV[0];
+
+open(my $fh, '<:encoding(UTF-8)', "$pkgPath/DEBIAN/control")
+  or die "Could not open file 'dur' $!";
+
+my $control = do { local $/; <$fh> };
+
+my ($package, $name, $version, $architecture, $description, $author, $maintainer, $section, $homepage) = ($control =~ $controlFormat);
+
+print "$package\_$version-0_$architecture.deb";
