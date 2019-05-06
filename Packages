@@ -28,3 +28,18 @@ Description: Additional glyph icons!
 Author: Morgrimm
 Name: Morglyphs
 
+Package: com.morgrimm.morglyphs
+Version: 1.0.1
+Architecture: iphoneos-arm
+Maintainer: Morgrimm
+Filename: ./debs/com.morgrimm.morglyphs_1.0.1_iphoneos-arm.deb
+Size: 217144
+MD5sum: d262694ed81a9ea41ab030ff58531d20
+SHA1: c0567c9521a2256db6d235eb24aa32ece139ae86
+SHA256: 743d286e6a29aa4e19ae22c0180f8a62e13fa5be3a74784300d9be6c86dd7e0b
+Section: Themes
+Homepage: https://github.com/morgrimm/morglyphs
+Description: Additional glyph icons!
+Author: Morgrimm
+Name: Morglyphs
+
