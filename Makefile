@@ -33,4 +33,4 @@ Packages.bz2: Packages
 	@bzip2 -fk $^
 
 clean:
-	@rm -rf Packages Packages.bz2 Release ./debs/* &> /dev/null
+	rm -rf Packages Packages.bz2 Release ./debs/* &> /dev/null
