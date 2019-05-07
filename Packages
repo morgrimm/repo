@@ -1,49 +1,4 @@
 Package: com.morgrimm.morglyphs
-Version: 0.1
-Architecture: iphoneos-arm
-Maintainer: Morgrimm
-Filename: ./debs/com.morgrimm.morglyphs_0.1_iphoneos-arm.deb
-Size: 208892
-MD5sum: 2457ac1cf095a2c3e6d7e3b49bddd7d0
-SHA1: 22b28ea13f52ea3fa390131326190ae2d95b492c
-SHA256: a1fb598624f596e78ed2487cafb1f6c439a0789faaebb7dfa1875af71b0da32b
-Section: Themes
-Homepage: https://github.com/morgrimm/morglyphs
-Description: Additional glyph icons!
-Author: Morgrimm
-Name: Morglyphs
-
-Package: com.morgrimm.morglyphs
-Version: 1.0.0
-Architecture: iphoneos-arm
-Maintainer: Morgrimm
-Filename: ./debs/com.morgrimm.morglyphs_1.0.0_iphoneos-arm.deb
-Size: 217144
-MD5sum: 4fe0cd6b6c70f719162253d703a3fb05
-SHA1: 07371058ff24281ed63f915e47788761ebfb6c0f
-SHA256: 380f6b7a631acbf538fd34d7ff9260b3fcdb9850019284fe27b66a021243aae7
-Section: Themes
-Homepage: https://github.com/morgrimm/morglyphs
-Description: Additional glyph icons!
-Author: Morgrimm
-Name: Morglyphs
-
-Package: com.morgrimm.morglyphs
-Version: 1.0.1
-Architecture: iphoneos-arm
-Maintainer: Morgrimm
-Filename: ./debs/com.morgrimm.morglyphs_1.0.1_iphoneos-arm.deb
-Size: 217144
-MD5sum: d262694ed81a9ea41ab030ff58531d20
-SHA1: c0567c9521a2256db6d235eb24aa32ece139ae86
-SHA256: 743d286e6a29aa4e19ae22c0180f8a62e13fa5be3a74784300d9be6c86dd7e0b
-Section: Themes
-Homepage: https://github.com/morgrimm/morglyphs
-Description: Additional glyph icons!
-Author: Morgrimm
-Name: Morglyphs
-
-Package: com.morgrimm.morglyphs
 Version: 1.0.2
 Architecture: iphoneos-arm
 Maintainer: Morgrimm
@@ -52,6 +7,21 @@ Size: 272116
 MD5sum: 910825817f8f84819f5da1bb1e6fa3f5
 SHA1: e6409b240fd3807e30afa8c6bd1c18c0fb79c80b
 SHA256: 186bc2a23c3c4f4dd2fb52cab94a1b972a83396c5d03e55cb2d99f9b3dd1a2a2
+Section: Themes
+Homepage: https://github.com/morgrimm/morglyphs
+Description: Additional glyph icons!
+Author: Morgrimm
+Name: Morglyphs
+
+Package: com.morgrimm.morglyphs
+Version: 1.0.4
+Architecture: iphoneos-arm
+Maintainer: Morgrimm
+Filename: ./debs/com.morgrimm.morglyphs_1.0.4_iphoneos-arm.deb
+Size: 402910
+MD5sum: 2f5b001301596be24ae615208d6aa335
+SHA1: d3f48c8dde431f6204db93cd5524679e4f6dcf87
+SHA256: fa3ea88cd94d65de2bca6b1a72dd138d540cf6d2a9b13c8aaa8c9b48230184d4
 Section: Themes
 Homepage: https://github.com/morgrimm/morglyphs
 Description: Additional glyph icons!
