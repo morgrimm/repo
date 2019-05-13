@@ -13,18 +13,18 @@ Description: Additional glyph icons!
 Author: Morgrimm
 Name: Morglyphs
 
-Package: com.tokems.Glyphs
-Version: 1.0.0
+Package: com.morgrimm.morglyphs
+Version: 1.0.6
 Architecture: iphoneos-arm
 Maintainer: Morgrimm
-Filename: ./debs/com.tokems.glyphs_1.0.0_iphoneos-arm.deb
-Size: 299486
-MD5sum: 8322fc72ae72d7ff390362553e6ae405
-SHA1: 1c72fc6be74fdb3828f1b6b784bbf0a17043e8f7
-SHA256: cbaf9876e5b6eada765e002a42ff2dde62dc12828dd15501d3d0f3e74d674467
+Filename: ./debs/com.morgrimm.morglyphs_1.0.6_iphoneos-arm.deb
+Size: 506236
+MD5sum: 18ecfc00fd777bc55cab227a0f1b30b4
+SHA1: cca1593a4705b746fab25a0bf9363d8b14eb3755
+SHA256: 5d0547d12176930897ba498e856892158ece6d104c19187a2e8e362d791bb172
 Section: Themes
-Homepage: https://github.com/morgrimm/tokems-glyphs
-Description: Tokem's glyph theme for Anemone/Winterboard.
-Author: Tokem
-Name: Tokem's Glyphs
+Homepage: https://github.com/morgrimm/morglyphs
+Description: Additional glyph icons!
+Author: Morgrimm
+Name: Morglyphs
 
