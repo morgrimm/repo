@@ -3,10 +3,10 @@ Version: 1.0.10
 Architecture: iphoneos-arm
 Maintainer: Morgrimm
 Filename: ./debs/com.morgrimm.morglyphs_1.0.10_iphoneos-arm.deb
-Size: 1615208
-MD5sum: ad5e31419d7026e35a0699c595971d86
-SHA1: ee43ee0e405f7314a8337c6194ccc9bc3d1ebade
-SHA256: d83afa1e5d4bec5c83ae9f725c3512afd5fe8db59bbb188cafd16eecec28a315
+Size: 1615250
+MD5sum: 755bf1d538b4b1a9fb956614c0225648
+SHA1: 2d2333342807ae8b6c99ca1156d156934de1e599
+SHA256: 9dc94ef13ecace4ca5f82a3de0c31d64071c9a79af7a8f5e75d2785aca9d0362
 Section: Themes
 Homepage: https://github.com/morgrimm/morglyphs
 Description: Additional glyph icons!
