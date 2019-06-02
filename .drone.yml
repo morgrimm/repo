@@ -47,6 +47,10 @@ steps:
   - apt-get update
   - apt-get install -y git
 
+  - git config credential.helper 'cache --timeout=120'
+  - git config user.name 'Drone'
+  - git config user.email 'drone'
+
   - mkdir -p /drone/$REPO
   - cd /drone/$REPO
 
