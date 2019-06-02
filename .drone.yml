@@ -1,0 +1,57 @@
+kind: pipeline
+name: release
+
+steps:
+- name: build
+  image: debian:latest
+  commands:
+  - apt-get update
+  - apt-get install -y build-essential git
+  - git submodule sync
+  - git submodule update --init
+
+  - cd /drone/src
+  
+  - make clean
+  - make debs
+  - make depictions
+  - make Release
+
+- name: push
+  image: debian:latest
+  environment:
+    TOKEN:
+      from_secret: github_token
+  commands:
+  - apt-get update
+  - apt-get install -y git
+
+  - git config credential.helper 'cache --timeout=120'
+  - git config user.name 'Drone'
+  - git config user.email 'drone'
+
+  - cd /drone/src
+  
+  - git add -A
+  - 'git commit -m "RELEASE [skip ci]"'
+  - git push https://$TOKEN@github.com/$DRONE_REPO.git $DRONE_BRANCH
+
+- name: update
+  image: debian:latest
+  environment:
+    REPO: morgrimm.github.io
+    PROD_BRANCH: master
+    TOKEN:
+      from_secret: github_token
+  commands:
+  - apt-get update
+  - apt-get install -y git
+
+  - mkdir -p /drone/$REPO
+  - cd /drone/$REPO
+
+  - git clone https://$TOKEN@github.com/morgrimm/$REPO.git .
+  - git submodule update --remote --merge
+  - git add -A
+  - 'git commit -m "Update APT repository"'
+  - git push -q https://$TOKEN@github.com/morgrimm/$REPO.git $PROD_BRANCH
