@@ -55,3 +55,6 @@ steps:
   - git add -A
   - 'git commit -m "Update APT repository"'
   - git push -q https://$TOKEN@github.com/morgrimm/$REPO.git $PROD_BRANCH
+trigger:
+  event:
+  - push
