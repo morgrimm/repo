@@ -1,0 +1,90 @@
+env_defaults: &env_defaults
+  docker:
+    - image: debian:stretch-slim
+  working_directory: ~/ci
+
+git_install: &git_install
+  run:
+    name: Install Git
+    command: |
+      apt-get update
+      apt-get install -y git
+
+git_configure_user: &git_configure_user
+  run:  
+    name: Configure Git user
+    command: |  
+      git config credential.helper 'cache --timeout=120'
+      git config user.name "CircleCI"
+      git config user.email "circleci"
+
+git_checkout: &git_checkout
+  run:
+    name: Checkout source
+    command: |
+      git clone https://${GITHUB_PERSONAL_TOKEN}@github.com/morgrimm/${REPO}.git .
+      git submodule sync
+      git submodule update --init
+      git checkout ${CIRCLE_BRANCH}
+
+version: 2.1
+jobs:
+  update_packages:
+    <<: *env_defaults
+    environment:
+      REPO: repo
+    steps:
+      - *git_install
+      - *git_checkout
+      - *git_configure_user
+      - run:
+          name: Install Make
+          command: apt-get install -y build-essential
+      - run:
+          name: Clean
+          command: make clean
+      - run:
+          name: Build packages
+          command: make debs
+      - run:
+          name: Generate depictions
+          command: make depictions
+      - run:
+          name: Generate release
+          command: make Release
+      - run:
+          name: Push release
+          command: |
+            git add -A
+            git commit -m "RELEASE by CircleCI [skip ci]"
+            git push -q https://${GITHUB_PERSONAL_TOKEN}@github.com/morgrimm/${REPO}.git ${CIRCLE_BRANCH}
+  update_repository:
+    <<: *env_defaults
+    environment:
+      REPO: morgrimm.github.io
+    steps:
+      - *git_install
+      - *git_checkout
+      - *git_configure_user
+      - run: git submodule update --remote --merge
+      - run:
+          name: Update repo submodule
+          command: |
+            git add -A
+            git commit -m "Update repo submodule by CircleCI [skip ci]"
+            git push -q https://${GITHUB_PERSONAL_TOKEN}@github.com/morgrimm/${REPO}.git ${CIRCLE_BRANCH}
+
+workflows:
+  version: 2
+  package-and-release:
+    jobs:
+      - update_packages:
+          filters:
+            branches:
+              only: master
+      - update_repository:
+          requires:
+            - update_packages
+          filters:
+            branches:
+              only: master
